@@ -44,11 +44,11 @@ import javax.xml.bind.annotation.XmlType;
 public class Picture {
 
     protected String author;
-    protected int height;
+    protected float height;
     protected int id;
     protected String material;
     protected String name;
-    protected int width;
+    protected float width;
     protected int year;
 
     /**
@@ -79,7 +79,7 @@ public class Picture {
      * Gets the value of the height property.
      * 
      */
-    public int getHeight() {
+    public float getHeight() {
         return height;
     }
 
@@ -87,7 +87,7 @@ public class Picture {
      * Sets the value of the height property.
      * 
      */
-    public void setHeight(int value) {
+    public void setHeight(float value) {
         this.height = value;
     }
 
@@ -159,7 +159,7 @@ public class Picture {
      * Gets the value of the width property.
      * 
      */
-    public int getWidth() {
+    public float getWidth() {
         return width;
     }
 
@@ -167,7 +167,7 @@ public class Picture {
      * Sets the value of the width property.
      * 
      */
-    public void setWidth(int value) {
+    public void setWidth(float value) {
         this.width = value;
     }
 

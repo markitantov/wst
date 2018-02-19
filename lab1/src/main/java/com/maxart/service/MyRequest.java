@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "MyRequest", namespace="http://standalone.maxart.com")
+@XmlRootElement(name = "MyRequest", namespace="http://service.maxart.com")
 public class MyRequest implements Serializable
 {
     @XmlElement(name = "id", required = false)
@@ -26,10 +26,10 @@ public class MyRequest implements Serializable
     private String material;
 
     @XmlElement(name = "height", required = false)
-    private int height;
+    private float height;
 
     @XmlElement(name = "width", required = false)
-    private int width;
+    private float width;
 
     public int getId() {
         return id;
@@ -71,19 +71,19 @@ public class MyRequest implements Serializable
         this.material = material;
     }
 
-    public int getHeight() {
+    public float getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(float height) {
         this.height = height;
     }
 
-    public int getWidth() {
+    public float getWidth() {
         return width;
     }
 
-    public void setWidth(int width) {
+    public void setWidth(float width) {
         this.width = width;
     }
 }

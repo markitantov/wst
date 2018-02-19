@@ -7,13 +7,13 @@ public class Picture {
     private String author;
     private int year;
     private String material;
-    private int height;
-    private int width;
+    private float height;
+    private float width;
 
     public Picture() {
     }
 
-    Picture(int id, String name, String author, int year, String material, int height, int width) {
+    Picture(int id, String name, String author, int year, String material, float height, float width) {
         this.id = id;
         this.name = name;
         this.author = author;
@@ -63,19 +63,19 @@ public class Picture {
         this.material = material;
     }
 
-    public int getHeight() {
+    public float getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(float height) {
         this.height = height;
     }
 
-    public int getWidth() {
+    public float getWidth() {
         return width;
     }
 
-    public void setWidth(int width) {
+    public void setWidth(float width) {
         this.width = width;
     }
 

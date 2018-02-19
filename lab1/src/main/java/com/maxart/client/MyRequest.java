@@ -48,8 +48,8 @@ public class MyRequest {
     protected String author;
     protected int year;
     protected String material;
-    protected int height;
-    protected int width;
+    protected float height;
+    protected float width;
 
     public MyRequest() {
         this.id = 0;
@@ -169,7 +169,7 @@ public class MyRequest {
      * Gets the value of the height property.
      * 
      */
-    public int getHeight() {
+    public float getHeight() {
         return height;
     }
 
@@ -177,7 +177,7 @@ public class MyRequest {
      * Sets the value of the height property.
      * 
      */
-    public void setHeight(int value) {
+    public void setHeight(float value) {
         this.height = value;
     }
 
@@ -185,7 +185,7 @@ public class MyRequest {
      * Gets the value of the width property.
      * 
      */
-    public int getWidth() {
+    public float getWidth() {
         return width;
     }
 
@@ -193,7 +193,7 @@ public class MyRequest {
      * Sets the value of the width property.
      * 
      */
-    public void setWidth(int value) {
+    public void setWidth(float value) {
         this.width = value;
     }
 

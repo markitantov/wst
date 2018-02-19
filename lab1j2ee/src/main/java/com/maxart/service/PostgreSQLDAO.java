@@ -43,8 +43,8 @@ public class PostgreSQLDAO {
                 String author = rs.getString("author");
                 int year = rs.getInt("year");
                 String material = rs.getString("material");
-                int height = rs.getInt("height");
-                int width = rs.getInt("width");
+                float height = rs.getFloat("height");
+                float width = rs.getFloat("width");
                 Picture picture = new Picture(id, name, author, year, material, height, width);
                 pictures.add(picture);
             }
