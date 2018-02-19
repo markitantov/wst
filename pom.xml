@@ -8,6 +8,7 @@
     <modules>
         <module>lab1</module>
         <module>lab1j2ee</module>
+        <module>lab2</module>
     </modules>
     <packaging>pom</packaging>
 
