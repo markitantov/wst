@@ -26,42 +26,36 @@ public interface PictureWebService {
 
     /**
      * 
-     * @param id
+     * @param material
+     * @param year
+     * @param author
+     * @param name
+     * @param width
+     * @param height
      * @return
      *     returns int
-     * @throws IllegalIdException
-     * @throws InvalidEntityException
+     * @throws AuthException
+     * @throws InsertingException
+     * @throws InvalidCreatingParametersException
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "deletePicture", targetNamespace = "http://service.maxart.com/", className = "com.maxart.client.DeletePicture")
-    @ResponseWrapper(localName = "deletePictureResponse", targetNamespace = "http://service.maxart.com/", className = "com.maxart.client.DeletePictureResponse")
-    public int deletePicture(
-        @WebParam(name = "id", targetNamespace = "")
-        int id)
-        throws IllegalIdException, InvalidEntityException
-    ;
-
-    /**
-     * 
-     * @param q
-     * @param id
-     * @return
-     *     returns int
-     * @throws IllegalQException
-     * @throws IllegalIdException
-     * @throws InvalidEntityException
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "updatePicture", targetNamespace = "http://service.maxart.com/", className = "com.maxart.client.UpdatePicture")
-    @ResponseWrapper(localName = "updatePictureResponse", targetNamespace = "http://service.maxart.com/", className = "com.maxart.client.UpdatePictureResponse")
-    public int updatePicture(
-        @WebParam(name = "id", targetNamespace = "")
-        int id,
-        @WebParam(name = "q", targetNamespace = "")
-        MyRequest q)
-        throws IllegalIdException, IllegalQException, InvalidEntityException
+    @RequestWrapper(localName = "createPicture", targetNamespace = "http://service.maxart.com/", className = "com.maxart.client.CreatePicture")
+    @ResponseWrapper(localName = "createPictureResponse", targetNamespace = "http://service.maxart.com/", className = "com.maxart.client.CreatePictureResponse")
+    public int createPicture(
+        @WebParam(name = "name", targetNamespace = "")
+        String name,
+        @WebParam(name = "author", targetNamespace = "")
+        String author,
+        @WebParam(name = "year", targetNamespace = "")
+        int year,
+        @WebParam(name = "material", targetNamespace = "")
+        String material,
+        @WebParam(name = "height", targetNamespace = "")
+        float height,
+        @WebParam(name = "width", targetNamespace = "")
+        float width)
+        throws AuthException, InsertingException, InvalidCreatingParametersException
     ;
 
     /**
@@ -94,35 +88,44 @@ public interface PictureWebService {
 
     /**
      * 
-     * @param material
-     * @param year
-     * @param author
-     * @param name
-     * @param width
-     * @param height
+     * @param id
      * @return
      *     returns int
-     * @throws InvalidCreatingParametersException
-     * @throws InsertingException
+     * @throws AuthException
+     * @throws InvalidEntityException
+     * @throws IllegalIdException
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "createPicture", targetNamespace = "http://service.maxart.com/", className = "com.maxart.client.CreatePicture")
-    @ResponseWrapper(localName = "createPictureResponse", targetNamespace = "http://service.maxart.com/", className = "com.maxart.client.CreatePictureResponse")
-    public int createPicture(
-        @WebParam(name = "name", targetNamespace = "")
-        String name,
-        @WebParam(name = "author", targetNamespace = "")
-        String author,
-        @WebParam(name = "year", targetNamespace = "")
-        int year,
-        @WebParam(name = "material", targetNamespace = "")
-        String material,
-        @WebParam(name = "height", targetNamespace = "")
-        float height,
-        @WebParam(name = "width", targetNamespace = "")
-        float width)
-        throws InsertingException, InvalidCreatingParametersException
+    @RequestWrapper(localName = "deletePicture", targetNamespace = "http://service.maxart.com/", className = "com.maxart.client.DeletePicture")
+    @ResponseWrapper(localName = "deletePictureResponse", targetNamespace = "http://service.maxart.com/", className = "com.maxart.client.DeletePictureResponse")
+    public int deletePicture(
+        @WebParam(name = "id", targetNamespace = "")
+        int id)
+        throws AuthException, IllegalIdException, InvalidEntityException
+    ;
+
+    /**
+     * 
+     * @param q
+     * @param id
+     * @return
+     *     returns int
+     * @throws AuthException
+     * @throws InvalidEntityException
+     * @throws IllegalQException
+     * @throws IllegalIdException
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "updatePicture", targetNamespace = "http://service.maxart.com/", className = "com.maxart.client.UpdatePicture")
+    @ResponseWrapper(localName = "updatePictureResponse", targetNamespace = "http://service.maxart.com/", className = "com.maxart.client.UpdatePictureResponse")
+    public int updatePicture(
+        @WebParam(name = "id", targetNamespace = "")
+        int id,
+        @WebParam(name = "q", targetNamespace = "")
+        MyRequest q)
+        throws AuthException, IllegalIdException, IllegalQException, InvalidEntityException
     ;
 
 }

@@ -31,11 +31,12 @@ public class ObjectFactory {
     private final static QName _CreatePictureResponse_QNAME = new QName("http://service.maxart.com/", "createPictureResponse");
     private final static QName _DeletePictureResponse_QNAME = new QName("http://service.maxart.com/", "deletePictureResponse");
     private final static QName _UpdatePictureResponse_QNAME = new QName("http://service.maxart.com/", "updatePictureResponse");
-    private final static QName _InvalidEntryException_QNAME = new QName("http://service.maxart.com/", "InvalidEntityException");
     private final static QName _FindPictures_QNAME = new QName("http://service.maxart.com/", "findPictures");
     private final static QName _CreatePicture_QNAME = new QName("http://service.maxart.com/", "createPicture");
     private final static QName _UpdatePicture_QNAME = new QName("http://service.maxart.com/", "updatePicture");
+    private final static QName _InvalidEntityException_QNAME = new QName("http://service.maxart.com/", "InvalidEntityException");
     private final static QName _GetAllPictures_QNAME = new QName("http://service.maxart.com/", "getAllPictures");
+    private final static QName _AuthException_QNAME = new QName("http://service.maxart.com/", "AuthException");
     private final static QName _DeletePicture_QNAME = new QName("http://service.maxart.com/", "deletePicture");
     private final static QName _IllegalIdException_QNAME = new QName("http://service.maxart.com/", "IllegalIdException");
     private final static QName _InsertingException_QNAME = new QName("http://service.maxart.com/", "InsertingException");
@@ -216,15 +217,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PictureServiceFault }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service.maxart.com/", name = "InvalidEntityException")
-    public JAXBElement<PictureServiceFault> createInvalidEntryException(PictureServiceFault value) {
-        return new JAXBElement<PictureServiceFault>(_InvalidEntryException_QNAME, PictureServiceFault.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link FindPictures }{@code >}}
      * 
      */
@@ -252,12 +244,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PictureServiceFault }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.maxart.com/", name = "InvalidEntityException")
+    public JAXBElement<PictureServiceFault> createInvalidEntityException(PictureServiceFault value) {
+        return new JAXBElement<PictureServiceFault>(_InvalidEntityException_QNAME, PictureServiceFault.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetAllPictures }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://service.maxart.com/", name = "getAllPictures")
     public JAXBElement<GetAllPictures> createGetAllPictures(GetAllPictures value) {
         return new JAXBElement<GetAllPictures>(_GetAllPictures_QNAME, GetAllPictures.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PictureServiceFault }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.maxart.com/", name = "AuthException")
+    public JAXBElement<PictureServiceFault> createAuthException(PictureServiceFault value) {
+        return new JAXBElement<PictureServiceFault>(_AuthException_QNAME, PictureServiceFault.class, null, value);
     }
 
     /**
